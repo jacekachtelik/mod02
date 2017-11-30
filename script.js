@@ -95,7 +95,7 @@ var MovieTitle = React.createClass({
         movie: React.PropTypes.object.isRequired,
     },
     render: function() {
-        var _movie = this.props.movie.movie;
+        var _movie = this.props.movie;
         // console.log(_movie);
        return (
            React.createElement('h2',{},_movie.title_)
@@ -109,7 +109,7 @@ var MovieYear = React.createClass({
         movie: React.PropTypes.object.isRequired,
     },
     render: function() {
-        var _movie = this.props.movie.movie;
+        var _movie = this.props.movie;
         // console.log(_movie);
         return (
             React.createElement('p',{},_movie.year__)
@@ -123,7 +123,7 @@ var MovieImage = React.createClass({
         movie: React.PropTypes.object.isRequired
     },
     render: function() {
-        var _movie = this.props.movie.movie;
+        var _movie = this.props.movie;
         return React.createElement('img',{src: _movie.path__})
     }
 });
@@ -133,7 +133,7 @@ var Movie = React.createClass({
         movie: React.PropTypes.object.isRequired
     },
     render: function() {
-        var _movie = this.props;
+        var _movie = this.props.movie;
         return (
             React.createElement('li',{id: this.props.movie.id, key: this.props.movie.id},
                 React.createElement(MovieTitle,{movie: _movie}),
@@ -153,13 +153,4 @@ var element = React.createElement('div',{},
     React.createElement('ul',{},movieElements)
 );
 ReactDOM.render(element,document.getElementById('app3'));
-
-
-
-    /*
-
-
-
-*/
-
 
