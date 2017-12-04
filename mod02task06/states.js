@@ -44,36 +44,12 @@ var Counter = React.createClass({
     }
 });
 
-var Counter1 = React.createClass({
-    getInitialState: function () {
-        return {
-            counter: 0
-        };
-    },
-    increment: function () {
-        this.setState({
-            counter: this.state.counter + 2
-        });
-    },
-    decrement: function () {
-        this.setState({
-            counter: this.state.counter - 2
-        })
-    },
-    render: function () {
-        console.log(this.state);
-        return (
-            React.createElement('div',{},
-                React.createElement('p',{},'Licznik: ' + this.state.counter),
-                React.createElement('button',{onClick: this.decrement},"-"),
-                React.createElement('button',{onClick: this.increment},"+")
-
-            )
-        );
-    }
-});
 var counter = React.createElement('div',{},
         React.createElement(Counter),
-        React.createElement(Counter1),
-    );
+);
 ReactDOM.render(counter,document.getElementById('app'));
+
+var counter1 = React.createElement('div',{},
+        React.createElement(Counter),
+);
+ReactDOM.render(counter1,document.getElementById('app1'));
