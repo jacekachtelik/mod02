@@ -1,3 +1,6 @@
+const GIPHY_API_URL = 'http://api.giphy.com';
+const GIPHY_PUB_KEY = 'lILtfRAQVOQaDPmHB2zJZ4AsmTnvLbUn';
+
 Search = React.createClass({
     getInitialState() {
         return {
